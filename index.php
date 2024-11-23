@@ -1,5 +1,15 @@
 <?php
-// Define questions and answers
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "quiz_app";
+$port = 3307;
+
+$conn = new mysqli($servername, $username, $password, $dbname, $port);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 $questions = [
     [
         "question" => "What does PHP stand for?",
@@ -18,10 +28,8 @@ $questions = [
     ]
 ];
 
-// Initialize score
 $score = 0;
 
-// Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach ($questions as $index => $question) {
         if (isset($_POST["question$index"]) && $_POST["question$index"] == $question['answer']) {
