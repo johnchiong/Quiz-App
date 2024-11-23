@@ -12,19 +12,54 @@ if ($conn->connect_error) {
 
 $questions = [
     [
-        "question" => "What does PHP stand for?",
-        "options" => ["Personal Home Page", "Private Home Page", "PHP: Hypertext Preprocessor", "Public Hypertext Preprocessor"],
+        "question" => "What is the name of the Traveler's sibling in Genshin Impact?",
+        "options" => ["Aether/Lumine", "Venti", "Paimon", "Dainsleif"],
+        "answer" => 0
+    ],
+    [
+        "question" => "Which Archon is known as the 'God of Contracts'?",
+        "options" => ["Raiden Shogun", "Venti", "Zhongli", "Nahida"],
         "answer" => 2
     ],
     [
-        "question" => "Which symbol is used to access a property of an object in PHP?",
-        "options" => [".", "->", "::", "#"],
+        "question" => "What is the name of the city that serves as Mondstadt's main location?",
+        "options" => ["Liyue Harbor", "Springvale", "Mondstadt City", "Dragonspine"],
+        "answer" => 2
+    ],
+    [
+        "question" => "Which region is the home of the Raiden Shogun?",
+        "options" => ["Sumeru", "Inazuma", "Mondstadt", "Liyue"],
         "answer" => 1
     ],
     [
-        "question" => "Which function is used to include a file in PHP?",
-        "options" => ["include()", "require()", "import()", "load()"],
+        "question" => "What is the name of the mysterious traveler who calls themselves the 'Bough Keeper'?",
+        "options" => ["Kaeya", "Dainsleif", "Albedo", "Childe"],
+        "answer" => 1
+    ],
+    [
+        "question" => "What elemental vision does the character Diluc possess?",
+        "options" => ["Pyro", "Cryo", "Electro", "Anemo"],
         "answer" => 0
+    ],
+    [
+        "question" => "What is the name of the Archipelago that appears during the Midsummer Island Adventure?",
+        "options" => ["Golden Apple Archipelago", "Seirai Island", "Narukami Island", "Dragonspine"],
+        "answer" => 0
+    ],
+    [
+        "question" => "Who is the Fatui Harbinger known as 'Childe'?",
+        "options" => ["Scaramouche", "Tartaglia", "Pantalone", "Columbina"],
+        "answer" => 1
+    ],
+    [
+        "question" => "What is the real name of the Geo Archon?",
+        "options" => ["Zhongli", "Morax", "Rex Lapis", "All of the above"],
+        "answer" => 3
+    ],
+    [
+        "question" => "What is the name of the organization that Ningguang leads?",
+        "options" => ["The Adventurers' Guild", "The Millelith", "The Liyue Qixing", "The Fatui"],
+        "answer" => 2
     ]
 ];
 
