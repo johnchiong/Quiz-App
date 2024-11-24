@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    $stmt = $conn->prepare("INSERT INTO scores (username, score) VALUES (?, ?)");
+    $stmt = $conn->prepare("INSERT INTO quiz_scores (user_name, score) VALUES (?, ?)");
     $stmt->bind_param("si", $username, $score);
     $stmt->execute();
     $stmt->close();
@@ -89,6 +89,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Quiz</title>
+
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
 </head>
 <body>
     <h1>Math Quiz</h1>
