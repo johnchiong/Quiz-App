@@ -12,54 +12,54 @@ if ($conn->connect_error) {
 
 $questions = [
     [
-        "question" => "What is the name of the Traveler's sibling in Genshin Impact?",
-        "options" => ["Aether/Lumine", "Venti", "Paimon", "Dainsleif"],
-        "answer" => 0
+        "question" => "What is 5 + 7?",
+        "options" => ["10", "12", "14", "15"],
+        "answer" => 1 // Correct answer is "12"
     ],
     [
-        "question" => "Which Archon is known as the 'God of Contracts'?",
-        "options" => ["Raiden Shogun", "Venti", "Zhongli", "Nahida"],
-        "answer" => 2
+        "question" => "What is 8 × 6?",
+        "options" => ["42", "46", "48", "50"],
+        "answer" => 2 // Correct answer is "48"
     ],
     [
-        "question" => "What is the name of the city that serves as Mondstadt's main location?",
-        "options" => ["Liyue Harbor", "Springvale", "Mondstadt City", "Dragonspine"],
-        "answer" => 2
+        "question" => "What is 9 - 4?",
+        "options" => ["3", "4", "5", "6"],
+        "answer" => 2 // Correct answer is "5"
     ],
     [
-        "question" => "Which region is the home of the Raiden Shogun?",
-        "options" => ["Sumeru", "Inazuma", "Mondstadt", "Liyue"],
-        "answer" => 1
+        "question" => "What is 15 ÷ 3?",
+        "options" => ["3", "4", "5", "6"],
+        "answer" => 2 // Correct answer is "5"
     ],
     [
-        "question" => "What is the name of the mysterious traveler who calls themselves the 'Bough Keeper'?",
-        "options" => ["Kaeya", "Dainsleif", "Albedo", "Childe"],
-        "answer" => 1
+        "question" => "What is the square root of 49?",
+        "options" => ["6", "7", "8", "9"],
+        "answer" => 1 // Correct answer is "7"
     ],
     [
-        "question" => "What elemental vision does the character Diluc possess?",
-        "options" => ["Pyro", "Cryo", "Electro", "Anemo"],
-        "answer" => 0
+        "question" => "What is 10²?",
+        "options" => ["100", "200", "50", "20"],
+        "answer" => 0 // Correct answer is "100"
     ],
     [
-        "question" => "What is the name of the Archipelago that appears during the Midsummer Island Adventure?",
-        "options" => ["Golden Apple Archipelago", "Seirai Island", "Narukami Island", "Dragonspine"],
-        "answer" => 0
+        "question" => "What is the value of π approximately?",
+        "options" => ["2.14", "3.14", "3.41", "4.13"],
+        "answer" => 1 // Correct answer is "3.14"
     ],
     [
-        "question" => "Who is the Fatui Harbinger known as 'Childe'?",
-        "options" => ["Scaramouche", "Tartaglia", "Pantalone", "Columbina"],
-        "answer" => 1
+        "question" => "If x = 5, what is 2x + 3?",
+        "options" => ["10", "11", "12", "13"],
+        "answer" => 3 // Correct answer is "13"
     ],
     [
-        "question" => "What is the real name of the Geo Archon?",
-        "options" => ["Zhongli", "Morax", "Rex Lapis", "All of the above"],
-        "answer" => 3
+        "question" => "What is 7 × 7?",
+        "options" => ["47", "48", "49", "50"],
+        "answer" => 2 // Correct answer is "49"
     ],
     [
-        "question" => "What is the name of the organization that Ningguang leads?",
-        "options" => ["The Adventurers' Guild", "The Millelith", "The Liyue Qixing", "The Fatui"],
-        "answer" => 2
+        "question" => "What is the perimeter of a square with a side length of 6?",
+        "options" => ["18", "24", "26", "36"],
+        "answer" => 1 // Correct answer is "24"
     ]
 ];
 
