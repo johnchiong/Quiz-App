@@ -71,6 +71,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $score++;
         }
     }
+
+    $stmt = $conn->prepare("INSERT INTO scores (username, score) VALUES (?, ?)");
+    $stmt->bind_param("si", $username, $score);
+    $stmt->execute();
+    $stmt->close();
+    
     echo "<h2>Your Score: $score/" . count($questions) . "</h2>";
     echo '<a href="index.php">Try Again</a>';
     exit;
