@@ -82,11 +82,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Quiz</title>
+    <title>Math Quiz</title>
 </head>
 <body>
-    <h1>PHP Quiz</h1>
+    <h1>Math Quiz</h1>
     <form method="post" action="">
+
+    <label for="user_name">Enter your name:</label>
+    <input type="text" name="user_name" id="user_name" placeholder="Your name..." required>
+    
         <?php foreach ($questions as $index => $question): ?>
             <fieldset>
                 <legend><?php echo $question['question']; ?></legend>
