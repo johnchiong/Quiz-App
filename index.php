@@ -72,11 +72,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
+    $user_name = isset($_POST['user_name']) ? trim($_POST['user_name']) : "Guest";
+
     $stmt = $conn->prepare("INSERT INTO quiz_scores (user_name, score) VALUES (?, ?)");
-    $stmt->bind_param("si", $username, $score);
+    $stmt->bind_param("si", $user_name, $score);
     $stmt->execute();
     $stmt->close();
-    
+
     echo "<h2>Your Score: $score/" . count($questions) . "</h2>";
     echo '<a href="index.php">Try Again</a>';
     exit;
@@ -90,8 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Quiz</title>
     <link rel="stylesheet" href="style.css">
-
     <script>
+
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.addEventListener('keydown', event => {
             if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
@@ -99,23 +101,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         });
     </script>
-
 </head>
 <body>
     <h1>Math Quiz</h1>
     <form method="post" action="">
-
-    <label for="user_name">Enter your name:</label>
-    <input type="text" name="user_name" id="user_name" placeholder="Your name..." required>
-    
+        <label for="user_name">Enter your name:</label>
+        <input type="text" name="user_name" id="user_name" placeholder="Your name..."  required>
         <?php foreach ($questions as $index => $question): ?>
             <fieldset>
                 <legend><?php echo $question['question']; ?></legend>
                 <?php foreach ($question['options'] as $optionIndex => $option): ?>
                     <label>
-                        <input type="radio" name="question<?php echo $index; ?>" value="<?php echo $optionIndex; ?>">
+                        <input type="radio" name="question<?php echo $index; ?>" value="<?php echo $optionIndex; ?>" required>
                         <?php echo $option; ?>
-                    </label><br>
+                    </label>
                 <?php endforeach; ?>
             </fieldset>
         <?php endforeach; ?>
@@ -123,3 +122,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
 </body>
 </html>
+
