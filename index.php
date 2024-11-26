@@ -74,13 +74,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $user_name = isset($_POST['user_name']) ? trim($_POST['user_name']) : "Guest";
 
+
     $stmt = $conn->prepare("INSERT INTO quiz_scores (user_name, score) VALUES (?, ?)");
     $stmt->bind_param("si", $user_name, $score);
     $stmt->execute();
     $stmt->close();
 
     echo "<h2>Your Score: $score/" . count($questions) . "</h2>";
-    echo '<a href="index.php">Try Again</a>';
+    echo '<a href="index.php">Try Again</a><br><br>';
+    echo '<a href="leaderboard.php">View Leaderboard</a>';
     exit;
 }
 ?>
@@ -122,4 +124,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
 </body>
 </html>
-
